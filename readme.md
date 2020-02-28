@@ -1,6 +1,6 @@
 ### WIP - Under development
 
-A package that returns the current browser's name for "private browsing" (Incognito/InPrivate/Private Browsing) and phrase displayed when right clicking on a link.
+A dependency-free micro-package that returns the current browser's name for "private browsing" (Incognito/InPrivate/Private Browsing) and phrase displayed when right clicking on a link.
 
 ```js
 // Example Running in Chrome
