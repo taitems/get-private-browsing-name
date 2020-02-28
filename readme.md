@@ -11,6 +11,8 @@ console.log(getPrivateBrowsingName());
 //   browser: "chrome",
 //   mode: "Incognito",
 //   linkMethod: "Open Link in Incognito Window",
+//   macMethod: 'Command⌘+Shift+p',
+//   windowsMethod: 'Ctrl+Shift+p',
 //   regex: /(?!Chrom.*OPR)Chrom(?:e|ium)\/([0-9\.]+)(:?\s|$)/
 // }
 ```
