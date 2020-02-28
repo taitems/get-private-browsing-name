@@ -4,7 +4,7 @@ A package that returns the current browser's name for "private browsing" (Incogn
 
 ```js
 // Example Running in Chrome
-import getPrivateBrowsingName from 'getPrivateBrowsingName';
+import getPrivateBrowsingName from 'get-private-browsing-name';
 console.log(getPrivateBrowsingName());
 // Logs the following
 // {
