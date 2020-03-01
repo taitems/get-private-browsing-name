@@ -1,11 +1,20 @@
 {
   "name": "get-private-browsing-name",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taitems/get-private-browsing-name.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taitems/get-private-browsing-name/issues"
+  },
+  "homepage": "https://github.com/taitems/get-private-browsing-name",
   "author": "Tait Brown <taitbrown@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": ["incognito","private browsing","inprivate"]
 }
