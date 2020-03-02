@@ -1,10 +1,10 @@
 {
   "name": "get-private-browsing-name",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,13 @@
   "homepage": "https://github.com/taitems/get-private-browsing-name",
   "author": "Tait Brown <taitbrown@gmail.com>",
   "license": "MIT",
-  "keywords": ["incognito","private browsing","inprivate"]
+  "keywords": [
+    "incognito",
+    "private browsing",
+    "inprivate"
+  ],
+  "devDependencies": {
+    "jest": "^25.1.0",
+    "jest-useragent-mock": "^0.0.3"
+  }
 }

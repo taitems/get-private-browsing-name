@@ -1,6 +1,26 @@
 const getPrivateBrowsingName = () => {
   const ua = navigator && navigator.userAgent;
-  const dict = [
+
+  const osDict = [
+    {
+      os: 'iOS',
+      regex: /iP(hone|od|ad)/
+    },
+    {
+      os: 'Linux',
+      regex: /(Linux)|(X11)/
+    },
+    {
+      os: 'Mac OS',
+      regex: /(Mac_PowerPC)|(Macintosh)/
+    },
+    {
+      os: 'Windows',
+      regex: /Win/
+    }
+  ];
+
+  const browserDict = [
     {
       browser: 'edge',
       mode: 'InPrivate Browsing',
@@ -67,14 +87,41 @@ const getPrivateBrowsingName = () => {
     },
   ];
 
-  for (let i = 0, count = dict.length; i < count; i++) {
-    const { regex } = dict[i];
-    const match = regex.exec(ua);
-    if (match) {
-      return dict[i];
+  const lookup = (dict, str) => {
+    for (let i = 0, count = dict.length; i < count; i++) {
+      const { regex } = dict[i];
+      const match = regex.exec(str);
+      if (match) {
+        return dict[i];
+      }
     }
+    return null;
   }
-  return null;
+
+  const getOs = (str) => {
+    const result = lookup(osDict, str);
+    return result && result.os || null;
+  }
+
+  const getBrowser = (str) => {
+    return lookup(browserDict, str);
+  }
+
+  const os = getOs(ua);
+  const browser = getBrowser(ua);
+
+  let detectedMethod = null;
+  if (os === 'Windows' || os === 'Linux') {
+    detectedMethod = browser.windowsMethod;
+  } else if (os === 'Mac OS' || os === 'iOS') {
+    detectedMethod = browser.macMethod;
+  }
+
+  return browser && {
+    ...browser,
+    detectedMethod,
+  } || null;
+
 }
 
-export default getPrivateBrowsingName;
+module.exports = getPrivateBrowsingName;
