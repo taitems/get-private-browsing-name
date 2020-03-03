@@ -84,7 +84,7 @@ const getPrivateBrowsingName = () => {
       macMethod: 'Command⌘+Shift+p',
       windowsMethod: 'Ctrl+Shift+p',
       regex: /MSIE\s(7\.0)/
-    },
+    }
   ];
 
   const lookup = (dict, str) => {
