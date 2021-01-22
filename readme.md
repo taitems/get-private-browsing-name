@@ -1,10 +1,30 @@
-### WIP - Under development
+### Get Private Browsing Name
 
-A dependency-free micro-package that returns the current browser's name for "private browsing" (Incognito/InPrivate/Private Browsing) and phrase displayed when right clicking on a link.
+A micro-package (8kb raw) that returns the current browser's name for "private browsing" (Incognito/InPrivate/Private Browsing) and phrase displayed when right clicking on a link.
 
+### Installation
+Depending on your package manager of choice
+- `yarn add get-private-browsing-name`, or
+- `npm install get-private-browsing-name`
 ### General rule of thumb:
-- **Safari MacOs, iOS:** Private Browsing Mode
+- **Safari:** Private Browsing Mode
 - **Gooogle Chrome:** Incognito Mode
+- **Microsoft Edge:** InPrivate Browsing Mode
+- **Mozilla Firefox:** Private Browsing
+
+### Test cases
+Run `yarn test` to see test cases
+
+| User Agent | Result | 
+| ---- | --- |
+| Chrome on macOS | ✅ Pass | 
+| Apple iPhone XR (Safari) | ✅ Pass | 
+| Apple iPhone XS (Chrome) | 🛑 Fail | 
+| Apple iPhone XS Max (Firefox) | 🛑 Fail | 
+| Windows 10-based PC using Edge browser | ✅ Pass | 
+| Windows 7-based PC using a Chrome browser | ✅ Pass | 
+
+### Example
 
 ```js
 // Example Running in Chrome
