@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,13 @@
     "inprivate"
   ],
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
     "jest": "^25.1.0",
     "jest-useragent-mock": "^0.0.3"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1"
   }
 }
