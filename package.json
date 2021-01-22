@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir dist",
-    "deploy": "babel src --out-dir dist && npm publish"
+    "build": "babel src --out-dir dist"
   },
   "repository": {
     "type": "git",
