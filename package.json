@@ -1,11 +1,11 @@
 {
   "name": "get-private-browsing-name",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "babel src --out-dir dist"
+    "build": "babel src/index.js --out-dir dist"
   },
   "repository": {
     "type": "git",
@@ -30,6 +30,7 @@
     "jest-useragent-mock": "^0.0.3"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.12.1"
+    "@babel/polyfill": "^7.12.1",
+    "core-js": "^3.22"
   }
 }

@@ -15,18 +15,10 @@ Depending on your package manager of choice
 - **Gooogle Chrome:** Incognito Mode
 - **Microsoft Edge:** InPrivate Browsing Mode
 - **Mozilla Firefox:** Private Browsing
+- **Opera:** Private Browsing
 
 ### Test cases
 Run `yarn test` to see test cases
-
-| User Agent | Result | 
-| ---- | --- |
-| Chrome on macOS | ✅ Pass | 
-| Apple iPhone XR (Safari) | ✅ Pass | 
-| Apple iPhone XS (Chrome) | 🛑 Fail | 
-| Apple iPhone XS Max (Firefox) | 🛑 Fail | 
-| Windows 10-based PC using Edge browser | ✅ Pass | 
-| Windows 7-based PC using a Chrome browser | ✅ Pass | 
 
 ### Example
 
@@ -45,3 +37,8 @@ console.log(getPrivateBrowsingName());
 //   regex: /(?!Chrom.*OPR)Chrom(?:e|ium)\/([0-9\.]+)(:?\s|$)/
 // }
 ```
+
+### Changelog
+
+#### `1.1.0` - Fixes hard crash. Adds Opera support. Fixes Chrome/Firefox-on-iOS tests.
+#### `1.0.0` - Stable release

@@ -38,8 +38,27 @@ const scenarios = [{
     mode: 'Incognito',
     browser: 'chrome',
     method: 'Ctrl'
+}, {
+    title: 'Opera on a Windows PC',
+    ua: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36 OPR/86.0.4363.23',
+    mode: 'Private Browsing',
+    browser: 'opera',
+    method: 'Ctrl'
+}, {
+    title: 'Opera on MacOS',
+    ua: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 12_3_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36 OPR/86.0.4363.23',
+    mode: 'Private Browsing',
+    browser: 'opera',
+    method: '⌘'
 }]
 
+describe('error handling', () => {
+    it('should fail gracefully', () => {
+        mockUserAgent("garbage input")
+        let result = getPrivateBrowsingName();
+        expect(result).toBe(null);
+    })
+})
 describe('mock useragent', () => {
     afterEach(() => {
         clear()
