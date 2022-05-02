@@ -1,4 +1,7 @@
-![npm](https://img.shields.io/npm/dw/get-private-browsing-name) ![npm](https://img.shields.io/npm/v/get-private-browsing-name) ![npm bundle size](https://img.shields.io/bundlephobia/min/get-private-browsing-name)
+![Build Status](https://img.shields.io/github/workflow/status/taitems/get-private-browsing-name/Tests/master)
+![npm](https://img.shields.io/npm/dw/get-private-browsing-name)
+![npm](https://img.shields.io/npm/v/get-private-browsing-name)
+![npm bundle size](https://img.shields.io/bundlephobia/min/get-private-browsing-name)
 ## Get Private Browsing Name
 
 A micro-package (< 3kb min) that returns the current browser's name for "private browsing" (Incognito/InPrivate/Private Browsing) and phrase displayed when right clicking on a link.
